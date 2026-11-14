@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOD — Astronomy Picture of the Day</title>
+    <meta
+      name="description"
+      content="Explore a imagem ou vídeo astronômico do dia da NASA."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">NASA</p>
+          <h1>Picture of the Day</h1>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Seleção de data">
+        <label class="date-picker" for="dateInput">
+          <span>Escolha uma data</span>
+          <input id="dateInput" type="date" />
+        </label>
+        <button id="loadButton" type="button">Carregar</button>
+      </section>
+
+      <p id="status" class="status" aria-live="polite">Carregando...</p>
+
+      <article id="apodCard" class="apod-card" aria-live="polite">
+        <div id="mediaContainer" class="media-container"></div>
+
+        <div class="content">
+          <div class="meta-row">
+            <h2 id="title">Carregando...</h2>
+            <span id="dateLabel" class="date-label"></span>
+          </div>
+
+          <p id="explanation" class="explanation">
+            Aguarde enquanto a imagem astronômica do dia é carregada.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
